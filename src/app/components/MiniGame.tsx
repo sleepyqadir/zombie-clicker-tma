@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { useAddress } from "@thirdweb-dev/react";
 
+interface MiniGameProps {
+  refetch: () => void; // Adjust the type as needed
+}
+
 interface Monster {
   health: number;
   maxHealth: number;
@@ -52,7 +56,7 @@ const monsterTypes = [
   },
 ];
 
-const MiniGame: React.FC = ({ refetch }) => {
+const MiniGame: React.FC<MiniGameProps> = ({ refetch }) => {
   const address = useAddress();
   const [energy, setEnergy] = useState(100);
   const [monster, setMonster] = useState<Monster | null>(null);

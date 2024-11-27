@@ -33,6 +33,7 @@ export default function Home() {
             <div className="flex flex-col mt-40 items-center justify-center text-white">
               <ConnectWallet />
               <Image
+                alt="Loading Zombie gif"
                 className="mt-40"
                 src={"/zombinTree.gif"}
                 width={200}
