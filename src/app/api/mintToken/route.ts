@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const EXPRESS_SERVER_URL = 'http://localhost:3000'; // Update with your Express server URL
+const EXPRESS_SERVER_URL = 'https://e2fc62be-d891-45f1-8695-5c9659b6c880.us-east-1.cloud.genez.io/'; // Update with your Express server URL
 
 export async function POST(request: Request) {
   const { userWalletAddress, amount } = await request.json();
@@ -23,11 +23,11 @@ export async function POST(request: Request) {
 
     return NextResponse.json(responseData);
   } catch (error) {
-    console.error('[DEBUG] Error hitting Express server:', error.message);
+    console.error('[DEBUG] Error hitting Express server:', error);
     return NextResponse.json(
       {
         message: 'Failed to transfer funds',
-        error: error.message,
+        error: error,
       },
       { status: 500 }
     );
