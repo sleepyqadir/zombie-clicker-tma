@@ -180,8 +180,8 @@ const MiniGame: React.FC<MiniGameProps> = ({ refetch }) => {
             <Image
               src={monsterTypes.find((m) => m.type === monster.type)!.image}
               alt={monster.type}
-              width={150}
-              height={150}
+              width={monster.type === "kid" ? 150 : 200}
+              height={monster.type === "kid" ? 150 : 200}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2">
               Click to attack!
