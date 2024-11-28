@@ -20,7 +20,7 @@ const monsterTypes = [
     minHealth: 30,
     maxHealth: 60,
     reward: 3,
-    image: "/zombinOne.gif",
+    image: "/z1.gif",
   },
   {
     type: "golem",
@@ -28,7 +28,7 @@ const monsterTypes = [
     minHealth: 61,
     maxHealth: 75,
     reward: 5,
-    image: "/zombinTwo.gif",
+    image: "/z2.webp",
   },
   {
     type: "gunMaster",
@@ -36,7 +36,7 @@ const monsterTypes = [
     minHealth: 76,
     maxHealth: 85,
     reward: 7,
-    image: "/zombinTree.gif",
+    image: "/z3.webp",
   },
   {
     type: "steveeWalk",
@@ -44,7 +44,7 @@ const monsterTypes = [
     minHealth: 86,
     maxHealth: 95,
     reward: 10,
-    image: "/stevee_walk.gif",
+    image: "/z4.webp",
   },
   {
     type: "MegaVolt",
@@ -52,7 +52,7 @@ const monsterTypes = [
     minHealth: 96,
     maxHealth: 100,
     reward: 15,
-    image: "/megavolt.gif",
+    image: "/z5.webp",
   },
 ];
 
@@ -180,8 +180,8 @@ const MiniGame: React.FC<MiniGameProps> = ({ refetch }) => {
             <Image
               src={monsterTypes.find((m) => m.type === monster.type)!.image}
               alt={monster.type}
-              width={monster.type === "kid" ? 150 : 200}
-              height={monster.type === "kid" ? 150 : 200}
+              width={300}
+              height={300}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2">
               Click to attack!
